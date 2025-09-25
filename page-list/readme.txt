@@ -3,8 +3,8 @@ Contributors: webvitaly
 Donate link: http://web-profile.net/donate/
 Tags: page-list, pagelist, sitemap, subpages, siblings
 Requires at least: 3.0
-Tested up to: 6.6
-Stable tag: 5.7
+Tested up to: 6.8.2
+Stable tag: 5.8
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -12,7 +12,6 @@ License URI: http://www.gnu.org/licenses/gpl.html
 
 == Description ==
 
-* **[Advanced iFrame Pro](https://1.envato.market/KdRNz "Advanced iFrame Pro")**
 * **[Page-list](http://web-profile.net/wordpress/plugins/page-list/ "Plugin page")**
 * **[all Page-list params](http://wordpress.org/plugins/page-list/other_notes/ "Page-list params")**
 * **[Donate](http://web-profile.net/donate/ "Support the development")**
@@ -129,6 +128,9 @@ When you changed the plugin's code you should also change the plugin's version t
 2. [pagelist_ext] shortcode
 
 == Changelog ==
+
+= 5.8 =
+* Sanitized some attributes for [pagelist_ext] shortcode
 
 = 5.7 =
 * Sanitized image_width and image_height for [pagelist_ext] shortcode
