@@ -3,13 +3,13 @@
 Plugin Name: Page-list
 Plugin URI: http://wordpress.org/plugins/page-list/
 Description: [pagelist], [subpages], [siblings] and [pagelist_ext] shortcodes
-Version: 5.8
+Version: 5.9
 Author: webvitaly
 Author URI: http://web-profile.net/wordpress/plugins/
 License: GPLv3
 */
 
-define('PAGE_LIST_PLUGIN_VERSION', '5.8');
+define('PAGE_LIST_PLUGIN_VERSION', '5.9');
 
 $pagelist_unq_settings = array(
 	'version' => PAGE_LIST_PLUGIN_VERSION,
@@ -59,7 +59,7 @@ if ( !function_exists('pagelist_unqprfx_shortcode') ) {
 			'exclude'      => pagelist_unqprfx_norm_params($exclude),
 			'exclude_tree' => pagelist_unqprfx_norm_params($exclude_tree),
 			'include'      => pagelist_unqprfx_norm_params($include),
-			'title_li'     => $title_li,
+			'title_li'     => esc_html($title_li),
 			'number'       => $number,
 			'offset'       => $offset,
 			'meta_key'     => $meta_key,
@@ -70,8 +70,8 @@ if ( !function_exists('pagelist_unqprfx_shortcode') ) {
 			'authors'      => $authors,
 			'sort_column'  => $sort_column,
 			'sort_order'   => $sort_order,
-			'link_before'  => $link_before,
-			'link_after'   => $link_after,
+			'link_before'  => esc_html($link_before),
+			'link_after'   => esc_html($link_after),
 			'post_type'    => $post_type,
 			'post_status'  => $post_status
 		);
@@ -104,7 +104,7 @@ if ( !function_exists('subpages_unqprfx_shortcode') ) {
 			'exclude'      => pagelist_unqprfx_norm_params($exclude),
 			'exclude_tree' => pagelist_unqprfx_norm_params($exclude_tree),
 			'include'      => pagelist_unqprfx_norm_params($include),
-			'title_li'     => $title_li,
+			'title_li'     => esc_html($title_li),
 			'number'       => $number,
 			'offset'       => $offset,
 			'meta_key'     => $meta_key,
@@ -115,8 +115,8 @@ if ( !function_exists('subpages_unqprfx_shortcode') ) {
 			'authors'      => $authors,
 			'sort_column'  => $sort_column,
 			'sort_order'   => $sort_order,
-			'link_before'  => $link_before,
-			'link_after'   => $link_after,
+			'link_before'  => esc_html($link_before),
+			'link_after'   => esc_html($link_after),
 			'post_type'    => $post_type,
 			'post_status'  => $post_status
 		);
@@ -151,7 +151,7 @@ if ( !function_exists('siblings_unqprfx_shortcode') ) {
 			'exclude'      => pagelist_unqprfx_norm_params($exclude),
 			'exclude_tree' => pagelist_unqprfx_norm_params($exclude_tree),
 			'include'      => pagelist_unqprfx_norm_params($include),
-			'title_li'     => $title_li,
+			'title_li'     => esc_html($title_li),
 			'number'       => $number,
 			'offset'       => $offset,
 			'meta_key'     => $meta_key,
@@ -162,8 +162,8 @@ if ( !function_exists('siblings_unqprfx_shortcode') ) {
 			'authors'      => $authors,
 			'sort_column'  => $sort_column,
 			'sort_order'   => $sort_order,
-			'link_before'  => $link_before,
-			'link_after'   => $link_after,
+			'link_before'  => esc_html($link_before),
+			'link_after'   => esc_html($link_after),
 			'post_type'    => $post_type,
 			'post_status'  => $post_status
 		);
